@@ -20,20 +20,17 @@ This repository contains the code and workflow for creating, testing, and deploy
 ## How to Use
 
 	1.	Clone this repository:
- 
-```bash
+
 git clone https://github.com/your-username/ml-model-development.git
 
 
 	2.	Navigate to the project directory:
 
-```bash
 cd ml-model-development
 
 
 	3.	Install dependencies:
 
-```bash
 pip install -r requirements.txt
 
 
