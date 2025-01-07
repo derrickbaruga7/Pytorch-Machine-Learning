@@ -4,37 +4,37 @@ This repository contains the code and workflow for creating, testing, and deploy
 
 ## Features
 
-	•	Model Development: Creating machine learning pipelines using advanced algorithms (e.g., LSTMs).
-	•	Data Ingestion: Optimized data pipelines for faster processing of large datasets.
-	•	Testing & Validation: Comprehensive quality assurance to ensure high model performance and pre-deployment reliability.
-	•	Deployment: End-to-end deployment processes for scalable and efficient machine learning solutions.
+• Model Development: Creating machine learning pipelines using advanced algorithms (e.g., LSTMs).
+• Data Ingestion: Optimized data pipelines for faster processing of large datasets.
+• Testing & Validation: Comprehensive quality assurance to ensure high model performance and pre-deployment reliability.
+• Deployment: End-to-end deployment processes for scalable and efficient machine learning solutions.
 
 ## Technologies Used
 
-	•	Programming: Python
-	•	Machine Learning Libraries: Scikit-learn, TensorFlow, PyTorch
-	•	Data Processing: Pandas, NumPy
-	•	Deployment: Docker, Flask/FastAPI
-	•	Version Control: Git
+• Programming: Python
+• Machine Learning Libraries: Scikit-learn, TensorFlow, PyTorch
+• Data Processing: Pandas, NumPy
+• Deployment: Docker, Flask/FastAPI
+• Version Control: Git
 
 ## How to Use
 
-	1.	Clone this repository:
+Clone this repository:
 
-git clone https://github.com/your-username/ml-model-development.git
-
-
-	2.	Navigate to the project directory:
-
-cd ml-model-development
+	git clone https://github.com/your-username/ml-model-development.git
 
 
-	3.	Install dependencies:
+Navigate to the project directory:
 
-pip install -r requirements.txt
+	cd ml-model-development
 
 
-	4.	Run the Jupyter Notebook (model 2.ipynb) for training and testing the machine learning model.
+Install dependencies:
+
+	pip install -r requirements.txt
+
+
+Run the Jupyter Notebook (model 2.ipynb) for training and testing the machine learning model.
 
 ## Future Improvements
 
