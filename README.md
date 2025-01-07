@@ -5,16 +5,23 @@ This repository contains the code and workflow for creating, testing, and deploy
 ## Features
 
 • Model Development: Creating machine learning pipelines using advanced algorithms (e.g., LSTMs).
+
 • Data Ingestion: Optimized data pipelines for faster processing of large datasets.
+
 • Testing & Validation: Comprehensive quality assurance to ensure high model performance and pre-deployment reliability.
+
 • Deployment: End-to-end deployment processes for scalable and efficient machine learning solutions.
 
 ## Technologies Used
 
 • Programming: Python
+
 • Machine Learning Libraries: Scikit-learn, TensorFlow, PyTorch
+
 • Data Processing: Pandas, NumPy
+
 • Deployment: Docker, Flask/FastAPI
+
 • Version Control: Git
 
 ## How to Use
@@ -38,9 +45,10 @@ Run the Jupyter Notebook (model 2.ipynb) for training and testing the machine le
 
 ## Future Improvements
 
-	•	Expansion to support real-time predictions.
-	•	Enhanced testing workflows with more advanced statistical validations.
-	•	Integration with cloud services for automated ML.
+• Expansion to support real-time predictions.
+• Enhanced testing workflows with more advanced statistical validations.
+• Integration with cloud services for automated ML.
+
 A repository showcasing the creation and testing of production-ready machine learning models, emphasizing data processing optimization, pipeline efficiency, and rigorous testing for deployment.
 
 Let me know if you’d like to customize further or add sections like examples of model outputs or diagrams!
