@@ -1,54 +1,32 @@
-# Machine Learning Model Development and Testing
+# Sales prediction with PyTorch
 
-This repository contains the code and workflow for creating, testing, and deploying machine learning models. The focus is on optimizing model accuracy, improving data processing pipelines, and ensuring robust deployment of production-ready systems.
+A notebook experiment using a feed-forward neural network to predict the `Sales` column from purchase-history features. It includes exploratory plots, an 80/20 train/test split, feature scaling fitted on the training set, and test mean squared error.
 
-## Features
+The implementation is in [model 2.ipynb](model%202.ipynb). It uses PyTorch; no LSTM, TensorFlow pipeline, web API, Docker deployment, or production serving system is included.
 
-• Model Development: Creating machine learning pipelines using advanced algorithms (e.g., LSTMs).
+## Setup
 
-• Data Ingestion: Optimized data pipelines for faster processing of large datasets.
+Use Python 3.10 or newer from the repository root:
 
-• Testing & Validation: Comprehensive quality assurance to ensure high model performance and pre-deployment reliability.
+```bash
+git clone https://github.com/derrickbaruga7/Pytorch-Machine-Learning.git
+cd Pytorch-Machine-Learning
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+jupyter lab "model 2.ipynb"
+```
 
-• Deployment: End-to-end deployment processes for scalable and efficient machine learning solutions.
+On Windows, activate with `.venv\Scripts\activate` instead. The default PyTorch installation is sufficient for the notebook's CPU workflow.
 
-## Technologies Used
+## Input data
 
-• Programming: Python
+The sales CSV is **not included**. Place an authorized copy at `data/Sales Data.csv`, or set `SALES_DATA_PATH` to its location before starting Jupyter. Local data is ignored by Git.
 
-• Machine Learning Libraries: Scikit-learn, TensorFlow, PyTorch
+The original workflow references `Product Category`, `Product`, `Quantity Ordered`, `Month`, `Sales`, `City`, `Time of Day`, `Order Date`, `Order ID`, and `Purchase Address`. An exported `Unnamed: 0` index column is optional. Dates use `%d-%m-%Y %H:%M`. Other retained feature columns must be numeric after encoding.
 
-• Data Processing: Pandas, NumPy
+## Model and interpretation
 
-• Deployment: Docker, Flask/FastAPI
+The network has hidden layers of 128 and 64 units, ReLU activations, Adam optimization, and MSE loss. The notebook trains for 200 epochs with a batch size of 64. NumPy and PyTorch seeds are set for repeatability; results can still vary across library versions and hardware.
 
-• Version Control: Git
-
-## How to Use
-
-Clone this repository:
-
-	git clone https://github.com/your-username/ml-model-development.git
-
-
-Navigate to the project directory:
-
-	cd ml-model-development
-
-
-Install dependencies:
-
-	pip install -r requirements.txt
-
-
-Run the Jupyter Notebook (model 2.ipynb) for training and testing the machine learning model.
-
-## Future Improvements
-
-• Expansion to support real-time predictions.
-• Enhanced testing workflows with more advanced statistical validations.
-• Integration with cloud services for automated ML.
-
-A repository showcasing the creation and testing of production-ready machine learning models, emphasizing data processing optimization, pipeline efficiency, and rigorous testing for deployment.
-
-Let me know if you’d like to customize further or add sections like examples of model outputs or diagrams!
+This is a row-level regression exercise, not a validated future-sales forecast. Review predictors such as quantity and unit price for target leakage before interpreting model performance. Time-based validation and comparison with a simple baseline are useful next steps. Saved outputs are cleared to avoid distributing row-level purchase data. Re-run the notebook with an authorized source CSV to generate results.
